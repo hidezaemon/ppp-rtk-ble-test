@@ -1,0 +1,95 @@
+:root {
+  color-scheme: light;
+  font-family: system-ui, -apple-system, "Noto Sans JP", sans-serif;
+  color: #17212b;
+  background: #edf2f6;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  width: min(48rem, calc(100% - 2rem));
+  margin: 1.5rem auto;
+}
+
+h1 {
+  color: #17324d;
+  margin-bottom: 0.25rem;
+}
+
+.notice {
+  margin-top: 0;
+  color: #4f5f6e;
+}
+
+section {
+  background: #fff;
+  border: 1px solid #cbd7e2;
+  border-radius: 0.6rem;
+  padding: 1rem;
+  margin: 1rem 0;
+  box-shadow: 0 2px 7px rgb(20 45 70 / 8%);
+}
+
+h2 {
+  font-size: 1.1rem;
+  margin: 0 0 0.75rem;
+}
+
+.button-row,
+.input-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+button,
+input {
+  min-height: 2.8rem;
+  border: 1px solid #758da3;
+  border-radius: 0.4rem;
+  font: inherit;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  color: #fff;
+  background: #1769aa;
+  cursor: pointer;
+}
+
+button:disabled {
+  color: #66727d;
+  background: #dfe5ea;
+  cursor: not-allowed;
+}
+
+label {
+  display: block;
+  margin: 1rem 0 0.35rem;
+}
+
+input {
+  flex: 1 1 15rem;
+  padding: 0 0.7rem;
+}
+
+pre {
+  min-height: 5rem;
+  max-height: 15rem;
+  overflow: auto;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  margin: 0;
+  padding: 0.75rem;
+  color: #dce9f5;
+  background: #132536;
+  border-radius: 0.35rem;
+}
+
+pre.error {
+  color: #ffd5d5;
+  background: #391d22;
+}

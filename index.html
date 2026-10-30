@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17324d">
+  <title>PPP-RTK BLE Test</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>PPP-RTK BLE Test</h1>
+    <p class="notice">Ver.0.1 通信確認専用（車両制御は行いません）</p>
+
+    <section aria-labelledby="connection-heading">
+      <h2 id="connection-heading">接続</h2>
+      <div class="button-row">
+        <button id="connect-button" type="button">BLE接続</button>
+        <button id="disconnect-button" type="button" disabled>BLE切断</button>
+      </div>
+      <p>状態: <strong id="connection-status" role="status">未接続</strong></p>
+    </section>
+
+    <section aria-labelledby="command-heading">
+      <h2 id="command-heading">コマンド送信</h2>
+      <div class="button-row">
+        <button class="send-control" data-command="PING" type="button" disabled>PING</button>
+        <button class="send-control" data-command="START" type="button" disabled>START</button>
+        <button class="send-control" data-command="STOP" type="button" disabled>STOP</button>
+      </div>
+      <label for="custom-command">任意文字列（改行なし）</label>
+      <div class="input-row">
+        <input id="custom-command" class="send-control" type="text" autocomplete="off" disabled>
+        <button id="send-custom-button" class="send-control" type="button" disabled>文字列送信</button>
+      </div>
+    </section>
+
+    <section aria-labelledby="receive-heading">
+      <h2 id="receive-heading">受信ログ</h2>
+      <pre id="receive-log" aria-live="polite"></pre>
+    </section>
+
+    <section aria-labelledby="error-heading">
+      <h2 id="error-heading">エラーログ</h2>
+      <pre id="error-log" class="error" aria-live="assertive"></pre>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
